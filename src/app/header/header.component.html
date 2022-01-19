@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" style="color: black; font-size: 20px;">Recipe Book</a>
+        </div>
+            <div class="nav-menu">
+                <ul class="nav navbar-nav">
+                    <li><a routerLink="/recipes">Recipes</a></li>
+                    <li><a routerLink="/shoppinglist">Shopping List</a></li>
+                    <li><a routerLink="/authentication" *ngIf="!isAuth">Authentication</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a style="cursor: pointer;" *ngIf="isAuth" (click)="onLogout()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+</nav>
